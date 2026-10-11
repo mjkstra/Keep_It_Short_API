@@ -1,6 +1,0 @@
-@KeepItShort_HostAddress = http://localhost:5177
-
-GET {{KeepItShort_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
