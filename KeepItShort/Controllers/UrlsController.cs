@@ -82,7 +82,9 @@ namespace KeepItShort.Controllers
                 (
                     statusCode: StatusCodes.Status400BadRequest,
                     detail: "il formato dell'url non è valido"
-                )
+                ),
+
+                _ => throw new NotSupportedException("Valore enum non previsto")
             };
         }
     }

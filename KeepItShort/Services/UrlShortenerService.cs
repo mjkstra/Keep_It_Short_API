@@ -20,8 +20,10 @@ namespace KeepItShort.Services
         {
             string normalizedUrl, urlShortCode;
 
-            if (!Uri.TryCreate(originalUrl, UriKind.Absolute, out var uri) ||
-                (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+            if (
+                    !Uri.TryCreate(originalUrl, UriKind.Absolute, out var uri) ||
+                    (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps)
+               )
             {
                 return new ShortenResult(ShortenStatus.InvalidUrl, null);
             }
